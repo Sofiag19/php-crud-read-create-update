@@ -23,7 +23,7 @@
     <!-- TEMPLATE: MESSAGE MENU -->
     <script id="box-template" type="text/x-handlebars-template">
       <div class="box">
-        <p class="conf"><span class="title">{{ title }}</span> ==> <span class="description">{{ description }}</span> </p>
+        <p class="conf"><span class="title">({{id}}) {{ title }}</span> ==> <span class="description">{{ description }}</span> </p>
       </div>
     </script>
 
