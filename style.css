@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightyellow;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(226, 144, 5);
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.conf {
+  margin-bottom: 10px;
+}
+
+.title {
+  color: red;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.description {
+  color: rgb(231, 65, 100);
+  font-size: 20px;
+}
