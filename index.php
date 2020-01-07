@@ -37,6 +37,14 @@
   <body>
 
     <h1>CONFIGURAZIONI</h1>
+    <h3>AGGIUNGI UNA NUOVA CONFIGURAZIONE</h3>
+    <form>
+      <label for="title">TITOLO</label>
+      <input type="text" name="title" value="" placeholder="Inserisci il titolo">
+      <label for="description">DESCRIZIONE</label>
+      <input type="text" name="description" value="" placeholder="Inserisci la descrizione">
+      <input type="submit" value="AGGIUNGI">
+    </form>
     <div id="container">
     </div>
   </body>
