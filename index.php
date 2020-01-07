@@ -38,7 +38,7 @@
 
     <h1>CONFIGURAZIONI</h1>
     <h3>AGGIUNGI UNA NUOVA CONFIGURAZIONE</h3>
-    <form>
+    <form id="myForm">
       <label for="title">TITOLO</label>
       <input type="text" name="title" value="" placeholder="Inserisci il titolo">
       <label for="description">DESCRIZIONE</label>
