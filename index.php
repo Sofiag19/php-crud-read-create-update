@@ -45,6 +45,16 @@
       <input class="campi" type="text" name="description" placeholder="Inserisci la descrizione">
       <input type="submit" value="AGGIUNGI">
     </form>
+    <h3>MODIFICA UNA CONFIGURAZIONE</h3>
+    <form id="myForm2">
+      <label for="id">ID</label>
+      <input type="text" name="id" placeholder="Inserisci ID">
+      <label for="title">TITOLO</label>
+      <input class="campi" type="text" name="title" placeholder="Inserisci il titolo">
+      <label for="description">DESCRIZIONE</label>
+      <input class="campi" type="text" name="description" placeholder="Inserisci la descrizione">
+      <input type="submit" value="MODIFICA">
+    </form>
     <div id="container">
     </div>
   </body>

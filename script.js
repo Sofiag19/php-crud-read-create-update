@@ -52,11 +52,30 @@ function newConfigurazione(){
   return false;
 }
 
+function updateConfigurazione(){
+  var me = $(this);
+  $.ajax({
+    url: "getUpdateConfigurazione.php",
+    method : "POST",
+    data : me.serialize(),
+    success : function(data){
+      console.log(data);
+      if (data) {
+        getConfigurazioni();
+      }
+    },
+    error : function(error){
+      console.log("error", error);
+    }
+  })
+  return false;
+}
 
 function init() {
 
   getConfigurazioni();
   $("#myForm").submit(newConfigurazione);
+  $("#myForm2").submit(updateConfigurazione);
 
 }
 
