@@ -16,6 +16,7 @@ function printData(data) {
 
 function getConfigurazioni() {
 
+  $(".box").remove();
   $.ajax({
 
     url: 'getConfigurazioni.php',

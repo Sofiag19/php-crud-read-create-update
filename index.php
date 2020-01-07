@@ -40,9 +40,9 @@
     <h3>AGGIUNGI UNA NUOVA CONFIGURAZIONE</h3>
     <form id="myForm">
       <label for="title">TITOLO</label>
-      <input type="text" name="title" value="" placeholder="Inserisci il titolo">
+      <input class="campi" type="text" name="title" placeholder="Inserisci il titolo">
       <label for="description">DESCRIZIONE</label>
-      <input type="text" name="description" value="" placeholder="Inserisci la descrizione">
+      <input class="campi" type="text" name="description" placeholder="Inserisci la descrizione">
       <input type="submit" value="AGGIUNGI">
     </form>
     <div id="container">
