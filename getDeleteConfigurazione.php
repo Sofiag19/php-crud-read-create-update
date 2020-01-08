@@ -2,13 +2,9 @@
 
   header('Content-Type: application/json');
 
-  list($id, $title, $description, ) = [
-                                        $_POST['id'],
-                                        $_POST['title'],
-                                        $_POST['description']
-  ];
+  $id = $_POST['id'];
 
-  if (!$title || !$description || !$id){
+  if (!$id){
     echo json_encode(-2);
     return;
   }
@@ -27,14 +23,13 @@
 
   $sql = "
 
-        UPDATE configurazioni
-        SET title = ?, description= ?
+        DELETE FROM configurazioni
         WHERE id = ?
 
 
   ";
   $stmt = $conn-> prepare($sql);
-  $stmt -> bind_param("ssi", $title, $description, $id);
+  $stmt -> bind_param("i", $id);
 
   $res = $stmt -> execute();
   $conn -> close();

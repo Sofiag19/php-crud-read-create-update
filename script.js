@@ -35,6 +35,7 @@ function getConfigurazioni() {
 
 function newConfigurazione(){
   var me = $(this);
+  console.log(me);
   $.ajax({
     url: "getNewConfigurazione.php",
     method : "POST",
@@ -71,13 +72,34 @@ function updateConfigurazione(){
   return false;
 }
 
+function deleteConfigurazione(){
+  var me = $(this);
+  $.ajax({
+    url: "getDeleteConfigurazione.php",
+    method : "POST",
+    data : me.serialize(),
+    success : function(data){
+      console.log(data);
+      if (data) {
+        getConfigurazioni();
+      }
+    },
+    error : function(error){
+      console.log("error", error);
+    }
+  })
+  return false;
+}
+
 function init() {
 
   getConfigurazioni();
 
-  $("#myForm").submit(newConfigurazione);
+  $("#aggiungiForm").submit(newConfigurazione);
 
-  $("#myForm2").submit(updateConfigurazione);
+  $("#modificaForm").submit(updateConfigurazione);
+
+  $("#eliminaForm").submit(deleteConfigurazione);
 
 }
 

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>PHP GRAPH - LEVEL</title>
+    <title>CRUD</title>
 
     <!-- FONT: LATO -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
@@ -38,7 +38,7 @@
 
     <h1>CONFIGURAZIONI</h1>
     <h3>AGGIUNGI UNA NUOVA CONFIGURAZIONE</h3>
-    <form id="myForm">
+    <form id="aggiungiForm">
       <label for="title">TITOLO</label>
       <input class="campi" type="text" name="title" placeholder="Inserisci il titolo">
       <label for="description">DESCRIZIONE</label>
@@ -46,7 +46,7 @@
       <input type="submit" value="AGGIUNGI">
     </form>
     <h3>MODIFICA UNA CONFIGURAZIONE</h3>
-    <form id="myForm2">
+    <form id="modificaForm">
       <label for="id">ID</label>
       <input type="text" name="id" placeholder="Inserisci ID">
       <label for="title">TITOLO</label>
@@ -54,6 +54,12 @@
       <label for="description">DESCRIZIONE</label>
       <input class="campi" type="text" name="description" placeholder="Inserisci la descrizione">
       <input type="submit" value="MODIFICA">
+    </form>
+    <h3>ELIMINA UNA CONFIGURAZIONE</h3>
+    <form id="eliminaForm">
+      <label for="id">ID</label>
+      <input type="text" name="id" placeholder="Inserisci ID">
+      <input type="submit" value="ELIMINA">
     </form>
     <div id="container">
     </div>

@@ -22,6 +22,8 @@
 
   ";
   $res = $conn -> query($sql);
+  $conn -> close();
+
   if ($res -> num_rows < 1) {
 
     echo json_encode(-2);
