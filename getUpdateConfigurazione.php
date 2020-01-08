@@ -2,6 +2,17 @@
 
   header('Content-Type: application/json');
 
+  list($id, $title, $description, ) = [
+                                        $_POST['id'],
+                                        $_POST['title'],
+                                        $_POST['description']
+  ];
+
+  if (!$title || !$description || !$id){
+    echo json_encode(-2);
+    return;
+  }
+
   $server = "localhost";
   $username = "root";
   $password = "root";
@@ -14,27 +25,16 @@
     return;
   }
 
-  list($title, $description, $id) = [
-                                        $_POST['title'],
-                                        $_POST['description'],
-                                        $_POST['id']
-                                      ];
-
-  if (!$title || !$description || !$id){
-    echo json_encode(-2);
-    return;
-  }
-
   $sql = "
 
-        UPDATE `configurazioni`
-        SET `title` = '".$title."','description'= '".$description."'
-        WHERE `configurazioni`.`id` = ".$id."
+        UPDATE configurazioni
+        SET title = ?, description= ?
+        WHERE id = ?
 
 
   ";
   $stmt = $conn-> prepare($sql);
-  $stmt -> bind_param("ssi", $title, $description,$id);
+  $stmt -> bind_param("ssi", $title, $description, $id);
 
   $res = $stmt -> execute();
   echo json_encode($res);

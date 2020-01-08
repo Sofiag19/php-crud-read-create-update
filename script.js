@@ -1,5 +1,6 @@
 function printData(data) {
 
+  $(".box").remove();
   var target = $("#container");
 
   var template = $("#box-template").html();
@@ -16,7 +17,6 @@ function printData(data) {
 
 function getConfigurazioni() {
 
-  $(".box").remove();
   $.ajax({
 
     url: 'getConfigurazioni.php',
@@ -74,7 +74,9 @@ function updateConfigurazione(){
 function init() {
 
   getConfigurazioni();
+
   $("#myForm").submit(newConfigurazione);
+
   $("#myForm2").submit(updateConfigurazione);
 
 }
